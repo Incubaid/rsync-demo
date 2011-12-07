@@ -1,0 +1,8 @@
+#emacs backups
+
+*.*~
+bisect*.out
+
+_build/
+coverage/
+tests/synced/
