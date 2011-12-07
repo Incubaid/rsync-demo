@@ -1,0 +1,5 @@
+true: annot
+true: debug
+#true: pp(camlp4 pa_o.cmo str.cma pa_ocamlviz.cmo pr_o.cmo)
+true: package(unix)
+
