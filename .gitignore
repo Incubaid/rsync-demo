@@ -2,6 +2,8 @@
 
 *.*~
 bisect*.out
+syncer.native
+syncer.byte
 
 _build/
 coverage/

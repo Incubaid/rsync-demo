@@ -3,11 +3,14 @@ type command =
   | Signature
   | Test
 
+open Signature
+module MySig = Signature(Adler) (Hash.SDigest)
+
 let calculate_signature fn sig_fn = 
-  let bs = (*... calculate this ... *) 512 in
-  let s = Signature.create fn bs in
+  let bs = MySig.optimal fn in
+  let s = MySig.create fn bs in
   let oc = open_out sig_fn in
-  Signature.output_signature oc s;
+  MySig.output_signature oc s;
   close_out oc
 
 
