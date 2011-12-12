@@ -31,15 +31,19 @@ you will need to consider this:
 Compiling
 ---------
 
-> ocamlbuild -use-ocamlfind syncer.native
+::
+
+    > ocamlbuild -use-ocamlfind syncer.native
 
 I added a script for coverage (using bisect). 
 A possible scenario is
 
-> ./coverage.sh
-> ./syncer.byte --test
-> bisect-report -I _build -html coverage bisect0001.out
-> firefox coverage/index.html
+::
+
+    > ./coverage.sh
+    > ./syncer.byte --test
+    > bisect-report -I _build -html coverage bisect0001.out
+    > firefox coverage/index.html
 
 have fun,
 
